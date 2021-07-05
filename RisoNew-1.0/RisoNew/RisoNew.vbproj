@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{A5C81E10-2F15-4A4C-A856-C5A4F16333A4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RisoNew</RootNamespace>
+    <AssemblyName>RisoNew</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>RisoNew.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>RisoNew.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Home.html" />
+    <Content Include="HomePage\JS\OrdiniLavorazione.js" />
+    <Content Include="HomePage\Templates\HomePage.html" />
+    <Content Include="HomePage\VB\SVC\SrvCliente.svc" />
+    <Content Include="HomePage\VB\SVC\SrvLavoratore.svc" />
+    <Content Include="HomePage\VB\SVC\SrvProdotto.svc" />
+    <Content Include="HomePage\VB\SVC\SrvTipoLavorazione.svc" />
+    <Content Include="Home\JS\HomeJS.js" />
+    <Content Include="Home\Templates\HomePAge.html" />
+    <Content Include="Home\VB\Client.aspx" />
+    <Content Include="Home\VB\Lavor.aspx" />
+    <Content Include="Home\VB\Lavoratore.aspx" />
+    <Content Include="Home\VB\Lavorazion.aspx" />
+    <Content Include="Home\VB\Merc.aspx" />
+    <Content Include="Home\VB\Messagi.aspx" />
+    <Content Include="Home\VB\Ordin.aspx" />
+    <Content Include="Home\VB\Prodott.aspx" />
+    <Content Include="Image\25.gif" />
+    <Content Include="Image\ajaxloader.gif" />
+    <Content Include="JS_CSS\css\CSS1.css" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="JS_CSS\css\jquery_ui.css" />
+    <Content Include="JS_CSS\css\ui.jqgrid-bootstrap-ui.css" />
+    <Content Include="JS_CSS\css\ui.jqgrid-bootstrap.css" />
+    <Content Include="JS_CSS\css\ui.jqgrid-bootstrap4.css" />
+    <Content Include="JS_CSS\css\ui.jqgrid.css" />
+    <Content Include="JS_CSS\js\Changes.txt" />
+    <Content Include="Home\JS\Home.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-ar.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-bg.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-ca.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-cn.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-cs.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-de.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-dk.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-el.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-en.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-es.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-fa.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-fi.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-fr.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-gl.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-he.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-hr.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-hu.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-id.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-is.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-it.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-ja.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-kr.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-lt.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-me.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-nl.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-no.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-pl.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-pt-br.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-pt.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-ro.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-ru.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-sk.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-sq.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-sr-latin.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-sr.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-sv.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-th.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-tr.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-tw.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-ua.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-uk.js" />
+    <Content Include="JS_CSS\js\i18n\grid.locale-vi.js" />
+    <Content Include="Access\JS\Index.js" />
+    <Content Include="JS_CSS\js\LoadingOverlay.js" />
+    <Content Include="JS_CSS\js\notify.min.js" />
+    <Content Include="JS_CSS\js\install.txt" />
+    <Content Include="JS_CSS\js\jquery-1.11.0.min.js" />
+    <Content Include="JS_CSS\js\jquery-ui.js" />
+    <Content Include="JS_CSS\js\jquery-ui.min.js" />
+    <Content Include="JS_CSS\js\jquery.jqGrid.min.js" />
+    <Content Include="JS_CSS\js\jquery.js" />
+    <Content Include="JS_CSS\js\JS1.js" />
+    <Content Include="JS_CSS\js\sweetalert.min.js" />
+    <Content Include="JS_CSS\plugins\grid.addons.js" />
+    <Content Include="JS_CSS\plugins\grid.postext.js" />
+    <Content Include="JS_CSS\plugins\grid.setcolumns.js" />
+    <Content Include="JS_CSS\plugins\jquery.contextmenu.js" />
+    <Content Include="JS_CSS\plugins\jquery.searchFilter.js" />
+    <Content Include="JS_CSS\plugins\jquery.tablednd.js" />
+    <Content Include="JS_CSS\plugins\searchFilter.css" />
+    <Content Include="JS_CSS\plugins\ui.multiselect.css" />
+    <Content Include="JS_CSS\plugins\ui.multiselect.js" />
+    <Content Include="Home\Templates\Home.html" />
+    <Content Include="Access\Templates\Index.html" />
+    <Content Include="Home\VB\Home.aspx" />
+    <Content Include="Access\VB\Index.aspx" />
+    <Content Include="TAB\TABELLE\Template\Tabelle.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DAL.vb" />
+    <Compile Include="Common\JsonFile.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\CLIENTE.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\ElementModif.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\Erreurs.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\InserimentoTipoLavorazione.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\LAVORO.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\MERCE.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\MESSAGGIO.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\ORDINE.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\PRODOTTO.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\TIPOLAVORAZIONE.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\UTENTE.vb" />
+    <Compile Include="DAO_PRG\DAO\DaoCliente.vb" />
+    <Compile Include="DAO_PRG\DAO\DaoLavoro.vb" />
+    <Compile Include="DAO_PRG\DAO\DaoMerce.vb" />
+    <Compile Include="DAO_PRG\DAO\DaoMessaggio.vb" />
+    <Compile Include="DAO_PRG\DAO\DaoOrdine.vb" />
+    <Compile Include="DAO_PRG\DAO\DaoProdotto.vb" />
+    <Compile Include="DAO_PRG\DAO\DaoTipolavorazione.vb" />
+    <Compile Include="DAO_PRG\DAO\DaoUtente.vb" />
+    <Compile Include="DAO_PRG\DAO\DAO_Int.vb" />
+    <Compile Include="DAO_PRG\ClassMapping\InserimentoProdotto.vb" />
+    <Compile Include="HomePage\VB\SVC\SrvCliente.svc.vb">
+      <DependentUpon>SrvCliente.svc</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\VB\SVC\SrvLavoratore.svc.vb">
+      <DependentUpon>SrvLavoratore.svc</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\VB\SVC\SrvProdotto.svc.vb">
+      <DependentUpon>SrvProdotto.svc</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\VB\SVC\SrvTipoLavorazione.svc.vb">
+      <DependentUpon>SrvTipoLavorazione.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Home\VB\Client.aspx.designer.vb">
+      <DependentUpon>Client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\VB\Client.aspx.vb">
+      <DependentUpon>Client.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Home\VB\Lavor.aspx.designer.vb">
+      <DependentUpon>Lavor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\VB\Lavor.aspx.vb">
+      <DependentUpon>Lavor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Home\VB\Lavoratore.aspx.designer.vb">
+      <DependentUpon>Lavoratore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\VB\Lavoratore.aspx.vb">
+      <DependentUpon>Lavoratore.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Home\VB\Lavorazion.aspx.designer.vb">
+      <DependentUpon>Lavorazion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\VB\Lavorazion.aspx.vb">
+      <DependentUpon>Lavorazion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Home\VB\Merc.aspx.designer.vb">
+      <DependentUpon>Merc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\VB\Merc.aspx.vb">
+      <DependentUpon>Merc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Home\VB\Messagi.aspx.designer.vb">
+      <DependentUpon>Messagi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\VB\Messagi.aspx.vb">
+      <DependentUpon>Messagi.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Home\VB\Ordin.aspx.designer.vb">
+      <DependentUpon>Ordin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\VB\Ordin.aspx.vb">
+      <DependentUpon>Ordin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Home\VB\Prodott.aspx.designer.vb">
+      <DependentUpon>Prodott.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\VB\Prodott.aspx.vb">
+      <DependentUpon>Prodott.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Home\VB\Home.aspx.designer.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\VB\Home.aspx.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Access\VB\Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Access\VB\Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\core.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\list.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\path.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="JS_CSS\css\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="HomePage\JS\HomePage.js" />
+    <Content Include="JS_CSS\css\HomePage.css" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Templates\" />
+    <Folder Include="VB\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49909</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49909/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Questo progetto fa riferimento a uno o più pacchetti NuGet che non sono presenti in questo computer. Usare lo strumento di ripristino dei pacchetti NuGet per scaricarli. Per altre informazioni, vedere http://go.microsoft.com/fwlink/?LinkID=322105. Il file mancante è {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

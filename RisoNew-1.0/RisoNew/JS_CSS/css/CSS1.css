@@ -1,0 +1,305 @@
+﻿.FieldsetLoginCl {
+    
+}
+
+section{
+    margin-top:15px;
+}
+
+.section_Index_cl {
+    width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    border-radius: 4px;
+}
+input {
+    width: 250px;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.btIconMessagio{
+    
+}
+.bticonCL {
+}
+
+.bticonCL:hover {
+        background-color:red;
+        color:black;
+}
+.LabelCL {
+    margin-left: 10px;
+}/*gestion dialog labell dialog lavoratore*/
+.utentcl {
+    margin-right: 24px;
+}
+.laligneCL{
+
+
+}
+
+label {
+    font-size: 20px;
+}
+button {
+    background-color: white; /* Green */
+    border: 2px solid #008CBA;
+    color: black;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
+button:hover {
+        background-color: #008CBA;
+        color: white;
+}
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+/*Impostazione autocomplete jqueryUI*/
+ul.ui-autocomplete {
+    z-index: 20000;
+    overflow-x: hidden;
+    padding: 2px 0 2px 0 !important;
+}
+
+    ul.ui-autocomplete.ui-menu .ui-menu-item .ui-menu-item-wrapper,
+    ul.ui-autocomplete.ui-menu .ui-menu-item .ui-menu-item-wrapper:hover {
+        font-size: 0.62em !important;
+        font-weight: normal !important;
+    }
+
+    ul.ui-autocomplete.ui-menu .ui-menu-item .ui-menu-item-wrapper {
+        color: #000000 !important;
+        background: #ffffff !important;
+    }
+
+        ul.ui-autocomplete.ui-menu .ui-menu-item .ui-menu-item-wrapper:hover {
+            color: #ffffff !important;
+            background: #1f9bcc !important;
+        }
+
+/*Impostazione datepicker jqueryUI*/
+.ui-datepicker-current {
+    display: none;
+}
+
+.ui-datepicker-buttonpane {
+    border: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.ui-datepicker {
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif !important;
+    font-size: 0.73em !important;
+    background: #fafafa !important;
+    z-index: 200 !important;
+}
+
+.notify_light {
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif !important;
+    background-color: #e3e3e3;
+    border: solid 1px #202020;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    color: #404040;
+    font-size: 1.1em;
+    padding: 5px 7px 5px 7px;
+    text-align: center;
+    width: auto;
+}
+
+.notify_dark {
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif !important;
+    background-color: #404040;
+    border: solid 1px #202020;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    color: #e3e3e3;
+    font-size: 1.1em;
+    padding: 5px 7px 5px 7px;
+    text-align: center;
+    width: auto;
+}
+
+.notify_icon_color {
+    color: #bc222f;
+}
+        /*-----------------*/
+
+.tb_icon {
+    cursor: pointer;
+    
+}
+
+
+
+
+.textariamio {
+    height: 60px;
+    width: 200px;
+}
+
+.desacttive{
+
+    display:none;
+}
+
+
+
+img {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10%;
+    width:200px;
+    height:200px;
+    
+}
+
+/*.loading {
+    position: fixed;
+    z-index: 9999;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    background: url('../../Image/ajaxloader.gif') no-repeat center;
+}*/
+
+
+.containe_image_loading_Cl {
+    display: none;
+    position: fixed;
+    top:2px;
+    z-index: 5;
+    transform: translate(50%,5%);
+    width:200px;
+    height: 200px;
+}
+
+.imgloading_Cl {    
+    
+    z-index: 7;    
+    width: 100%;
+    height: 100%;
+    
+}
+
+/*mise en page della tab LAVORO*/
+
+
+/*image2cl{
+
+    text-align:center;
+}*/
+
+/* gestion del entete delle tabelle */
+.ui-jqgrid-titlebar {
+    border: 1px solid #4297D7;
+    color: palevioletred;
+    font-weight: bold;
+    background-color:bisque;
+    
+    
+}
+/*gestion del button di chiusura*/
+.ui-jqgrid .ui-jqgrid-titlebar-close span{
+   background-color:darkred;
+}
+/*gestion dell'icon di spegnimento delle colomn*/
+.modificaColumnsClchiuso, .modificaColumnsCl, .modificaColumnsClOrdine {
+    /* position:absolute;   
+   margin-right:100px; */
+    padding-left: 50px;
+}
+
+
+    /*taglia di una tabella*/
+    /*header*/
+    #gbox_OrdiASS {
+   
+}
+.ui-jqgrid .ui-jqgrid-hdiv {
+color:aqua;
+}
+/*tutto il corpo delle tabelle*/
+.ui-jqgrid {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    .ui-jqgrid > .ui-jqgrid-view {
+        font-size: 10px;
+    }
+
+    .ui-jqgrid .ui-jqgrid-hdiv .ui-jqgrid-labels .ui-th-column {
+        color: blue;
+    }
+
+    /*per la barra di ricerca*/
+    .ui-jqgrid > .ui-jqgrid-view input,
+    .ui-jqgrid > .ui-jqgrid-view select,
+    .ui-jqgrid > .ui-jqgrid-view textarea,
+    .ui-jqgrid > .ui-jqgrid-view button {
+        font-size: 12px;
+    }
+
+th {
+   
+}
+/*modul input delle tabelle */
+.divinputColCL{
+    display:inline-block;
+}
+  .divinputColCL input{
+        width: 200px;
+        padding: 5px 5px;
+        margin: 6px 0px;
+        box-sizing: border-box;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+  .divinputColCL label{
+      font-size:12px;
+      margin-left:5px;
+        }
+
+  /*gestion di tutti input nember*/
+input[type=number] {
+    width: 10em;
+} 
+
+/*dialog*/
+.ui-dialog-title{
+    color:firebrick;
+    
+}
+.ui-dialog-titlebar{
+    background-color:darkgrey;
+}
+.ui-dialog-titlebar-close {
+    background-color:red;
+}
+.ui-dialog-buttonpane {
+   
+}
+.ui-dialog-buttonset {
+    
+}

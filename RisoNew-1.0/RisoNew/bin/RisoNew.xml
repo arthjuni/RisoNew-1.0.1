@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+RisoNew
+</name>
+</assembly>
+<members>
+<member name="T:RisoNew.My.MyWebExtension">
+ <summary>
+ Modulo utilizzato per definire le proprietà disponibili nello spazio dei nomi My per i progetti Web.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:RisoNew.My.MyWebExtension.Computer">
+ <summary>
+ Restituisce informazioni sul computer host.
+ </summary>
+</member>
+<member name="P:RisoNew.My.MyWebExtension.User">
+ <summary>
+ Restituisce informazioni sull'utente Web corrente.
+ </summary>
+</member>
+<member name="P:RisoNew.My.MyWebExtension.Request">
+ <summary>
+ Restituisce l'oggetto Request.
+ </summary>
+</member>
+<member name="P:RisoNew.My.MyWebExtension.Response">
+ <summary>
+ Restituisce l'oggetto Response.
+ </summary>
+</member>
+<member name="P:RisoNew.My.MyWebExtension.Log">
+ <summary>
+ Restituisce l'oggetto AspLog.
+ </summary>
+</member>
+<member name="M:RisoNew.DAL.ExecuteTransaction(System.Collections.Generic.List{System.String},System.String@,System.Int32@)">
+ <summary>
+ 
+ </summary>
+ <param name="sSqlList"></param>
+ <param name="rsMess"></param>
+ <param name="rowsaffected"></param>
+ <returns></returns>
+</member>
+<member name="M:RisoNew.SrvTipoLavorazione.Update(System.Collections.Generic.List{RisoNew.ElementModif})">
+ <summary>
+ 
+ </summary>
+ <param name="obj">un objetto chi permette di modificate qualsiasi grid</param>
+ <returns> la class erreur ,chi ha un attributo EsitoP chi è un booleen </returns>
+</member>
+</members>
+</doc>

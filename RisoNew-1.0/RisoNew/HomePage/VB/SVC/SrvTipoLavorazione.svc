@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="VB" Debug="true" Service="RisoNew.SrvTipoLavorazione" CodeBehind="SrvTipoLavorazione.svc.vb" %>

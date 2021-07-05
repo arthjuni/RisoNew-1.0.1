@@ -1,0 +1,82 @@
+/*il navbar*/
+.barCl{
+ margin-left:25px;
+ margin-right:25px;
+ 
+}
+ul{
+  background-color:rgb(162,173,189);  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+li a{  
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+.barClSite li{
+  display: inline-block;
+  min-width: 5em;
+  margin: 0 0.5em;
+} 
+.LiLogOutCl{
+ position:absolute;
+ right:50px;
+  
+}
+
+/*tab tabelle*/
+.ContainTabTabelleCL{
+  display:inline-block;
+  margin-left:25px;
+  margin-right:25px;
+}
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  min-width:160px;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown  {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(224,222,199);
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px          rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+    background-color: rgb(197,221,224);
+}
+
+.show {display: block;}
