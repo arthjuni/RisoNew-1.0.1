@@ -31,6 +31,233 @@ var codiceRegex //codice fiscale del cliente
 let valori = [] //erray dei valori modificati 
 let valeurInstant // il valore della cella modificata
 
+var creaElementi = {
+    creaClient: function () {
+        $('.ContainDialCl').html(creaClient)
+        $('input').focusout(function (event) {
+            var r = /^[A-Za-z]{6}[0-9]{2}[ABCDEHLMPRSTabcdehlmprst]{1}[0-9]{2}[A-Za-z]{1}[0-9]{3}[A-Za-z]{1}$/
+
+            if ($('#CodicefiscaleId').val().match(r)) {
+
+                $('#CodicefiscaleId').css('color', 'green')
+                // $('.ui-dialog-buttonpane button').prop('disabled', false)
+                if ($('#SedeId').val() != 0 && $('#ViaId').val() != 0 && $('#RagineSocialeId').val() != 0 && $('#CodicefiscaleId').val() != 0) {
+                    $('.ui-dialog-buttonpane button').prop('disabled', false)
+                }
+                codiceRegex = $('#CodicefiscaleId').val()
+            } else {
+                $('#CodicefiscaleId').css('color', 'red')
+                $('.ui-dialog-buttonpane button').prop('disabled', true)
+                $.notify('Codice fiscale sbagliato', 'error')
+                return
+            }
+        })
+        //$('input').focusin(function(){
+
+        //    if($('#SedeId').val() != 0 && $('#ViaId').val() != 0 && $('#RagineSocialeId').val() != 0 && $('#CodicefiscaleId').val() != 0) {
+        //    $('.ui-dialog-buttonpane button').prop('disabled', false)
+        //}
+        //}) 
+
+        $('.ContainDialCl').dialog({
+            resizable: false,
+            draggable: false,
+            height: "auto",
+            title: "INSERIMENTO CLIENTE",
+            width: 730,
+            height: 260,
+            modal: true,
+            open: function () {
+
+                $('.ui-dialog-buttonpane button').prop('disabled', true)
+            },
+            buttons: {
+                "INVIO": function () {
+
+                    ListaFc.Clienti()
+                    //Inserimento.Lavoratori();
+                    $(this).dialog("close");
+                    $('.ContainDialCl').html('');
+                }
+            },
+            position: {
+                my: "center center",
+                at: "center center",
+                of: window
+            },
+            focus: function (event, ui) {
+
+
+            },
+            close: function (event, ui) {
+                //$(this).dialog("close");
+                $('.ContainDialCl').html('');
+
+            }
+
+
+
+
+
+        })
+    },
+    creaLavoratore: function () {
+        /*creation di lavorattore*/
+        $('.ContainDialCl').html(creaLavorator)
+        $('input').focusout(function () {
+
+            if ($('.Nome_Utente_cl').val() != 0 && $('.Cognome_Utente_cl').val() && $('.Ruolo_Utente_cl').val() && $('.Utente_Utente_cl').val() && $('.Password_Utente_cl').val()) {
+                $('.ui-dialog-buttonpane button').prop('disabled', false)
+            } else {
+                $('.ui-dialog-buttonpane button').prop('disabled', true)
+            }
+        })
+        /*gestion deli ruoli lavorator*/
+        for (p in tableauRuolo) {
+            $('.Ruolo_Utente_cl').append("<option value=" + p + ">" + tableauRuolo[p] + "</option>")
+        }
+        $('.ContainDialCl').dialog({
+            resizable: false,
+            draggable: false,
+            height: "auto",
+            title: "INSERIMENTO LAVORATORE",
+            width: 730,
+            height: 260,
+            modal: true,
+            open: function () {
+
+                $('.ui-dialog-buttonpane button').prop('disabled', true)
+            },
+            buttons: {
+                "INVIO": function () {
+
+                    ListaFc.Lavoratori();
+                    $(this).dialog("close");
+                    $('.ContainDialCl').html('');
+                }
+            },
+            position: {
+                my: "center center",
+                at: "center center",
+                of: window
+            },
+            focus: function (event, ui) {
+
+
+            },
+            close: function (event, ui) {
+                //$(this).dialog("close");
+                $('.ContainDialCl').html('');
+
+            }
+
+
+
+
+
+        })},
+    creaProdotto: function () {
+        $('.ContainDialCl').html(creaProdotto)
+        $('.prodottofocusCl').focusout(function () {
+            if ($('.tipoProdottoCl').val() != 0 && $('.descrizioneProdottoCl').val() != 0) {
+                $('.ui-dialog-buttonpane button').prop('disabled', false)
+            } else {
+                $('.ui-dialog-buttonpane button').prop('disabled', true)
+            }
+        })
+        $('.ContainDialCl').dialog({
+            resizable: false,
+            draggable: false,
+            title: "INSERIMENTO PRODOTTO",
+            width: 380,
+            height: 280,
+            modal: true,
+            open: function () {
+
+                $('.ui-dialog-buttonpane button').prop('disabled', true)
+            },
+            buttons: {
+                "INVIO": function () {
+
+                    ListaFc.Prodotti();
+                    $(this).dialog("close");
+                    $('.ContainDialCl').html('');
+                }
+            },
+            position: {
+                my: "center center",
+                at: "center center",
+                of: window
+            },
+            focus: function (event, ui) {
+
+
+            },
+            close: function (event, ui) {
+                //$(this).dialog("close");
+                $('.ContainDialCl').html('');
+
+            }
+
+
+
+
+
+        })
+    },
+    creaTipolavorazione: function () {
+        $('.ContainDialCl').html(creaTipoLavorazione)
+        $('.prodottofocusCl').focusout(function () {
+            if ($('.TipoLavorazioneCl').val() != 0 && $('.DescriptionLavorazioneCl').val() != 0) {
+                $('.ui-dialog-buttonpane button').prop('disabled', false)
+            } else {
+                $('.ui-dialog-buttonpane button').prop('disabled', true)
+            }
+        })
+        $('.ContainDialCl').dialog({
+            resizable: false,
+            draggable: false,
+            height: "auto",
+            title: "INSERIMENTO TIPO LAVORAZIONE",
+            width: 400,
+            height: 245,
+            modal: true,
+            open: function () {
+
+                $('.ui-dialog-buttonpane button').prop('disabled', true)
+            },
+            buttons: {
+                "INVIO": function () {
+
+                    ListaFc.Lavorazioni();
+                    $(this).dialog("close");
+                    $('.ContainDialCl').html('');
+                }
+            },
+            position: {
+                my: "center center",
+                at: "center center",
+                of: window
+            },
+            focus: function (event, ui) {
+
+
+            },
+            close: function (event, ui) {
+                //$(this).dialog("close");
+                $('.ContainDialCl').html('');
+
+
+            }
+
+
+
+
+
+        })
+    },
+}
+
 var ListaFc = {
     /*gestire la couleur delle righe o delle column*/
     CouleurRiga: function (rd) {
@@ -1505,59 +1732,7 @@ $(function () {
         /*gestion del click su botton Lavoratore*/
             $('.CreaLavoratoreCl').on('click', function () {                
                 /*creation di lavorattore*/
-                $('.ContainDialCl').html(creaLavorator)
-                $('input').focusout(function () {
-
-                    if ($('.Nome_Utente_cl').val() != 0 && $('.Cognome_Utente_cl').val() && $('.Ruolo_Utente_cl').val() && $('.Utente_Utente_cl').val() && $('.Password_Utente_cl').val()) {
-                        $('.ui-dialog-buttonpane button').prop('disabled', false)
-                    } else {
-                        $('.ui-dialog-buttonpane button').prop('disabled', true)
-                    }
-                })
-                /*gestion deli ruoli lavorator*/
-                for (p in tableauRuolo) {
-                    $('.Ruolo_Utente_cl').append("<option value=" + p + ">" + tableauRuolo[p] + "</option>")
-                } 
-                $('.ContainDialCl').dialog({
-                    resizable: false,
-                    draggable: false,
-                    height: "auto",
-                    title: "INSERIMENTO LAVORATORE",
-                    width: 730,
-                    height: 260,
-                    modal: true,
-                    open: function () {
-
-                        $('.ui-dialog-buttonpane button').prop('disabled', true)
-                    },
-                    buttons: {
-                        "INVIO": function () {
-
-                            ListaFc.Lavoratori();
-                            $(this).dialog("close");
-                            $('.ContainDialCl').html('');
-                        }
-                    },
-                    position: {
-                        my: "center center",
-                        at: "center center",
-                        of: window
-                    },
-                    focus: function (event, ui) {
-
-
-                    },
-                    close: function (event, ui) {
-                        //$(this).dialog("close");
-                        $('.ContainDialCl').html('');
-                       
-                    }
-
-
-
-
-
-                })
+                creaElementi.creaLavoratore()
 
             })
             /*lista dei lavoratori*/
@@ -1673,73 +1848,7 @@ $(function () {
             //creation di clienti
             $('.CreaCliente').on('click', function () {
                 
-                $('.ContainDialCl').html(creaClient)
-                $('input').focusout(function (event) {
-                    var r = /^[A-Za-z]{6}[0-9]{2}[ABCDEHLMPRSTabcdehlmprst]{1}[0-9]{2}[A-Za-z]{1}[0-9]{3}[A-Za-z]{1}$/
-
-                    if ($('#CodicefiscaleId').val().match(r)) {
-
-                        $('#CodicefiscaleId').css('color', 'green')
-                       // $('.ui-dialog-buttonpane button').prop('disabled', false)
-                        if ($('#SedeId').val() != 0 && $('#ViaId').val() != 0 && $('#RagineSocialeId').val() != 0 && $('#CodicefiscaleId').val() != 0) {
-                    $('.ui-dialog-buttonpane button').prop('disabled', false)
-                    }
-                    codiceRegex = $('#CodicefiscaleId').val()
-                    } else {
-                        $('#CodicefiscaleId').css('color', 'red')                                             
-                        $('.ui-dialog-buttonpane button').prop('disabled', true)  
-                        $.notify('Codice fiscale sbagliato', 'error')
-                        return
-                    }
-                })
-                //$('input').focusin(function(){
-
-                //    if($('#SedeId').val() != 0 && $('#ViaId').val() != 0 && $('#RagineSocialeId').val() != 0 && $('#CodicefiscaleId').val() != 0) {
-                //    $('.ui-dialog-buttonpane button').prop('disabled', false)
-                //}
-                //}) 
-
-                $('.ContainDialCl').dialog({
-                    resizable: false,
-                    draggable: false,
-                    height: "auto",
-                    title: "INSERIMENTO CLIENTE",
-                    width: 730,
-                    height: 260,
-                    modal: true,
-                    open: function () {
-                        
-                        $('.ui-dialog-buttonpane button').prop('disabled', true)
-                    },
-                    buttons: {
-                        "INVIO": function () {
-
-                            ListaFc.Clienti()
-                            //Inserimento.Lavoratori();
-                            $(this).dialog("close");
-                            $('.ContainDialCl').html('');
-                        }
-                    },
-                    position: {
-                        my: "center center",
-                        at: "center center",
-                        of: window
-                    },
-                    focus: function (event, ui) {
-
-
-                    },
-                    close: function (event, ui) {
-                        //$(this).dialog("close");
-                        $('.ContainDialCl').html('');
-
-                    }
-
-
-
-
-
-                })
+               creaElementi.creaClient()
             })
 
             //lista Clienti
@@ -1856,54 +1965,8 @@ $(function () {
 
             //creation di Prodotto
             $('.CreaProdotto').on('click', function () {
-                $('.ContainDialCl').html(creaProdotto)
-                $('.prodottofocusCl').focusout(function () {
-                    if ($('.tipoProdottoCl').val() !=0 && $('.descrizioneProdottoCl').val() != 0) {
-                        $('.ui-dialog-buttonpane button').prop('disabled', false)
-                    } else {
-                        $('.ui-dialog-buttonpane button').prop('disabled', true)
-                    }
-                })
-                $('.ContainDialCl').dialog({
-                    resizable: false,
-                    draggable: false,
-                    title: "INSERIMENTO PRODOTTO",
-                    width: 380,
-                    height: 280,
-                    modal: true,
-                    open: function () {
-
-                        $('.ui-dialog-buttonpane button').prop('disabled', true)
-                    },
-                    buttons: {
-                        "INVIO": function () {
-
-                            ListaFc.Prodotti();
-                            $(this).dialog("close");
-                            $('.ContainDialCl').html('');
-                        }
-                    },
-                    position: {
-                        my: "center center",
-                        at: "center center",
-                        of: window
-                    },
-                    focus: function (event, ui) {
-
-
-                    },
-                    close: function (event, ui) {
-                        //$(this).dialog("close");
-                        $('.ContainDialCl').html('');
-                       
-                    }
-
-
-
-
-
-                })
-
+             
+                creaElementi.creaProdotto()
             })
 
             //lista Prodotto
@@ -2019,56 +2082,8 @@ $(function () {
 
              //creation di TipoLavorazione
             $('.CreaTipoLavorazione').on('click', function () {
-                $('.ContainDialCl').html(creaTipoLavorazione)
-                $('.prodottofocusCl').focusout(function () {
-                    if ($('.TipoLavorazioneCl').val() != 0 && $('.DescriptionLavorazioneCl').val() != 0) {
-                        $('.ui-dialog-buttonpane button').prop('disabled', false)
-                    } else {
-                        $('.ui-dialog-buttonpane button').prop('disabled', true)
-                    }
-                })
-                $('.ContainDialCl').dialog({
-                    resizable: false,
-                    draggable: false,
-                    height: "auto",
-                    title: "INSERIMENTO TIPO LAVORAZIONE",
-                    width: 400,
-                    height: 245,
-                    modal: true,
-                    open: function () {
-
-                        $('.ui-dialog-buttonpane button').prop('disabled', true)
-                    },
-                    buttons: {
-                        "INVIO": function () {
-
-                            ListaFc.Lavorazioni();
-                            $(this).dialog("close");
-                            $('.ContainDialCl').html('');
-                        }
-                    },
-                    position: {
-                        my: "center center",
-                        at: "center center",
-                        of: window
-                    },
-                    focus: function (event, ui) {
-
-
-                    },
-                    close: function (event, ui) {
-                        //$(this).dialog("close");
-                        $('.ContainDialCl').html('');
-                        
-
-                    }
-
-
-
-
-
-                })
-
+                
+                creaElementi.creaTipolavorazione()
             })
 
             //lista TipoLavorazione
