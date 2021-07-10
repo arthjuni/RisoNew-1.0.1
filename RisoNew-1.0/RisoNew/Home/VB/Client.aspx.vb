@@ -35,6 +35,20 @@
 
         End If
 
+        If Tipo = "DialogClientLista" Then
+            Dim xeletion As New JsonFile()
+            Dim tgd As New List(Of String)
+
+            tgd.Add("Codice")
+            tgd.Add("Description")
+            tgd.Add("Sede")
+
+
+            Dim flusso As String = xeletion.CreaJsonTable("DialogCLIENTI", tgd).ToString()
+            Response.Write(flusso)
+
+        End If
+
     End Sub
 
 End Class
