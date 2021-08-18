@@ -349,7 +349,6 @@ C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\bin\roslyn\VBCSCompiler.exe
 C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\bin\roslyn\VBCSCompiler.exe.config
 C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\obj\Debug\RisoNew.vbprojAssemblyReference.cache
 C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\obj\Debug\RisoNew.Resources.resources
 C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\obj\Debug\RisoNew.vbproj.GenerateResource.cache
 C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\obj\Debug\RisoNew.vbproj.CoreCompileInputs.cache
@@ -357,3 +356,4 @@ C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\obj\Debug\RisoNew.vbproj.CopyC
 C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\obj\Debug\RisoNew.dll
 C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\obj\Debug\RisoNew.xml
 C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\obj\Debug\RisoNew.pdb
+C:\REPOSITORY_GIT\RisoNew-1.0\RisoNew-1.0\RisoNew\obj\Debug\RisoNew.vbprojAssemblyReference.cache
